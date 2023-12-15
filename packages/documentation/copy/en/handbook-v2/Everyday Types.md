@@ -675,7 +675,7 @@ Writing `!` after any expression is effectively a type assertion that the value 
 
 ```ts twoslash
 function liveDangerously(x?: number | null) {
-  // No error
+  // No TS error, but running this code could result in a runtime TypeError error
   console.log(x!.toFixed());
 }
 ```
